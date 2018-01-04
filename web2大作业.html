@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<title>web2大作业</title>
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="web2大作业.css">
+	<script type="text/javascript">
+function showsub(li){ 
+ var submenu=li.getElementsByTagName("ul")[0]; 
+ submenu.style.display="block"; 
+} 
+function hidesub(li){ 
+ var submenu=li.getElementsByTagName("ul")[0]; 
+ submenu.style.display="none"; 
+}
+
+window.onload=function(){
+	lunbo=document.getElementById("lunbo");
+	picScroll1=document.getElementById("picScroll1");
+	var ID=setInterval(changeToLeft,15);
+	lunbo.onmouseover=function(){
+		clearInterval(ID);
+	}
+	lunbo.onmouseout=function(){
+		ID=setInterval(changeToLeft,15)
+	}
+	function changeToLeft(){
+		if(lunbo.scrollLeft>=(lunbo.offsetWidth)){
+			lunbo.scrollLeft=0;
+	}
+	else{
+		lunbo.scrollLeft+=1;
+		}
+		
+	}
+			var username = document.getElementById("username");	
+			username.onblur = checkUsername;
+		} 
+
+		function checkUsername() { 
+			var username = document.getElementById("username");
+			if (username.value.length == 0)
+			{		
+				username.parentNode.innerHTML = username.parentNode.innerHTML+"<span style='color:red'>请输入用户</span>";
+			}
+}
+function show(){
+	    var img = document.createElement("img");
+		img.src="images/t1.jpg";
+		img.width=200;
+		img.height=200;
+		document.getElementById("d2").appendChild(img);
+}
+function shut(){
+
+	document.getElementById("d2").removeChild(document.getElementById("d2").lastChild);
+	}
+    function checkAll(){  
+        var all=document.getElementById('check');
+        var one=document.getElementsByName('box'); 
+        all.checked=true; 
+           for(var i=0;i<one.length;i++){  
+                one[i].checked=true;
+        }
+    }
+function clearAll(){
+		var all=document.getElementById('check');
+        var one=document.getElementsByName('box'); 
+        if(all.checked==true)
+        {
+        	for(var j=0;j<one.length;j++)
+        	{
+        		one[j].checked=false;
+        	}
+        }
+        all.checked=false;
+}
+	</script>
+</head>
+<body>
+<div id="nav" class="nav"> 
+ <ul id="listUL"> 
+  <li><a href="#">网站首页</a></li>
+  <li onmouseover="showsub(this)" onmouseout="hidesub(this)"><a href="#">明星展示</a> 
+  <ul> 
+   <li><a href="#">王力宏</a></li> 
+   <li><a href="#">周杰伦</a></li> 
+   <li><a href="#">吴彦祖</a></li> 
+  </ul> 
+  </li> 
+  <li onmouseover="showsub(this)" onmouseout="hidesub(this)"><a href="#">娱乐中心</a> 
+  <ul> 
+   <li><a href="#">明星视频</a></li> 
+   <li><a href="#">案例学习</a></li> 
+   <li><a href="#">交流平台</a></li> 
+  </ul> 
+  </li> 
+  <li><a href="#">经典案例</a></li> 
+  <li><a href="#">关于我们</a></li> 
+ </ul> 
+</div>
+
+<div id="d2"></div>
+<div id="d3">
+	<input type="button" value="弹出" id="tc" onclick="show()">
+
+	<input type="button" value="关闭" id="gb" onclick="shut()">
+</div>
+	<div id="gequ">新&nbsp;歌&nbsp;首&nbsp;发---------在线展示</div>
+	<div id="lunbo">
+	<span id="picScroll1">
+		<img src="images/t2.jpg"/>
+		<img src="images/t3.jpg"/>
+		<img src="images/t4.jpg"/>
+		<img src="images/t5.jpg"/>
+	</span>
+	<span id="picScroll2">
+		<img src="images/t2.jpg"/>
+		<img src="images/t3.jpg"/>
+		<img src="images/t4.jpg"/>
+		<img src="images/t5.jpg"/>
+	</span>
+</div>
+<div id="denglu">
+<form>
+			<table>
+			<tr>
+				<td>用户名：</td>
+				<td><input type="text" id="username" name="username" /><span id="errorTip"></span></td>
+			</tr>
+			<tr>
+				<td>密码：</td>
+				<td><input type="password" id="passwd"</td>
+			</tr>
+			<tr>
+				<td>确认密码：</td>
+				<td><input type="password" id="rePasswd"/></td>
+			</tr>
+			<tr>
+				<td>&nbsp;</td>
+				<td><input type="reset" id="reset" value="注册" />
+				<input id="submit" type="submit" value="登录" /></td>
+			</tr>
+		</table>
+</form>
+</div>
+<div id="tz">
+	新&nbsp;歌&nbsp;推&nbsp;荐
+</div>
+<div id="xz">
+<img src="images/t7.jpg"><br>梦想开始的地方
+	<input type="button" value="下载" id="btn">
+	<input type="checkbox" name="box"></br>
+	<img src="images/t8.jpg"><br>梦想开始的地方
+	<input type="button" value="下载" id="btn">
+	<input type="checkbox" name="box"></br>
+	<img src="images/t13.jpg"><br>梦想开始的地方
+	<input type="button" value="下载" id="btn">
+	<input type="checkbox" name="box"></br>
+</div>
+<div id="xz2">
+	<img src="images/t14.jpg"><br>梦想开始的地方
+	<input type="button" value="下载" id="btn">
+	<input type="checkbox" name="box"></br>
+	<img src="images/t15.jpg"><br>梦想开始的地方
+	<input type="button" value="下载" id="btn">
+	<input type="checkbox" name="box"></br>
+	<img src="images/t16.jpg"><br>梦想开始的地方
+	<input type="button" value="下载" id="btn">
+	<input type="checkbox" name="box"></br>
+</div>
+<div id="xz3">
+	<img src="images/t17.jpg"><br>梦想开始的地方
+	<input type="button" value="下载" id="btn">
+	<input type="checkbox" name="box"></br>
+	<img src="images/t8.jpg"><br>梦想开始的地方
+	<input type="button" value="下载" id="btn">
+	<input type="checkbox" name="box"></br>
+	<img src="images/t7.jpg"><br>梦想开始的地方
+	<input type="button" value="下载" id="btn">
+	<input type="checkbox" name="box"></br>
+</div>
+<div id="qbxz">
+	<input type="button" value="全部下载" id="qb" onclick="checkAll()">
+	<input type="button" value="全部取消" onclick="clearAll()">
+	<input type="checkbox" id="check" onclick="checkAll()">
+</div>
+</body>
+</html>

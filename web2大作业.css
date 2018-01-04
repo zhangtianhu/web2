@@ -1,0 +1,115 @@
+*{ 
+ margin:0; 
+ padding:0; 
+} 
+body{
+	background-image:url(images/t12.jpg);
+}
+.nav{ 
+ background-color:#FAD700; 
+ height:40px; 
+ width:100%;
+ margin:0 auto; 
+ background-image: url(images/t9.jpg);
+} 
+ul{ 
+ list-style:none; 
+} 
+ul li{ 
+ float:left; 
+ line-height:40px; 
+ text-align:center; 
+} 
+a{ 
+ text-decoration:none; 
+ color:#F6E010; 
+ display:block; 
+ width:90px; 
+ height:40px; 
+} 
+a:hover{ 
+ background-color:#666666; 
+ color:#FFFFFF; 
+} 
+ul li ul li{ 
+ float:none; 
+ background-color:#EEEEEE; 
+} 
+ul li ul{ 
+ display:none; 
+} 
+ul li ul li a:link,ul li ul li a:visited{ 
+ background-color:#EEEEEE; 
+} 
+ul li ul li a:hover{ 
+ background-color:#009933; 
+}
+#tu{
+
+	width: 200px;
+	height: 200px;
+}
+#d2{
+	float: none;
+	position: absolute;
+	margin-top: 50px;
+	width: 200px;
+}
+#d3{
+	position: absolute;
+	margin-top: 50px;
+	float: none;
+}
+#denglu{
+	position: absolute;
+	left: 1000px;
+	margin-top: 200px;
+}
+
+#gequ{
+	font-size: 30px;
+	position: absolute;
+	top:150px;
+	left:320px;	
+}
+#lunbo{
+	position: absolute;
+	top: 200px;
+	left: 250px;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 700px;
+}
+#tz{
+	width: 800px;
+	height: 100px;
+	position: absolute;
+	margin-top: 385px;
+	left: 200px;
+	font-size: 30px;
+	background-image:url(images/t10.jpg);
+	text-align: center;
+}
+#xz{
+	float: left;
+	position:absolute;
+	margin-top: 500px; 
+	left: 300px;
+}
+#xz2{
+	float: left;
+	position: absolute;
+	left: 550px;
+	margin-top: 500px;
+}
+#xz3{
+	float: left;
+	position: absolute;
+	left: 800px;
+	margin-top: 500px;
+}
+#qbxz{
+	position: absolute;
+	left: 850px;
+	margin-top: 850px;
+}
